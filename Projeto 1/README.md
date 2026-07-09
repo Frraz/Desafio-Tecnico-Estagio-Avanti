@@ -26,7 +26,7 @@ O projeto é estático, não precisa instalar nada. Basta clonar e abrir o
 `index.html` no navegador:
 
 ```bash
-git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+git clone https://github.com/Frraz/Desafio-Tecnico-Estagio-Avanti.git
 ```
 
 Se preferir rodar num servidor local (recomendado), dá pra usar a extensão

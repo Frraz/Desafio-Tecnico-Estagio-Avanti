@@ -23,8 +23,8 @@ nome, foto e bio, seguindo o layout proposto no Figma.
 Precisa do Node.js 20 ou superior.
 
 ```bash
-git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
-cd "Projeto 2"
+git clone https://github.com/Frraz/Desafio-Tecnico-Estagio-Avanti.git
+cd "Desafio-Tecnico-Estagio-Avanti/Projeto 2"
 npm install
 npm run dev
 ```
