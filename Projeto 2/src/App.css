@@ -1,0 +1,349 @@
+/*
+  Projeto 2 - Perfil GitHub
+  Cores e medidas seguem o layout do Figma (frame de 1440x810,
+  painel central de 1156x537).
+*/
+
+.pagina {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: #1f1f1f;
+}
+
+/* Tema claro (variação do Figma): muda só o fundo da página e os pontos */
+.pagina--claro {
+  background: linear-gradient(115deg, #fdf4f2 0%, #f6dcdc 55%, #eec9cf 100%);
+}
+
+/* Brilhos azuis dos cantos */
+.brilho {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, #005cff 0%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.brilho--direita {
+  width: 888px;
+  height: 888px;
+  top: -268px;
+  right: -254px;
+}
+
+.brilho--esquerda {
+  width: 674px;
+  height: 674px;
+  left: -415px;
+  top: 198px;
+}
+
+/* Grade de pontos do canto superior esquerdo (239x225 no Figma) */
+.pontos {
+  position: absolute;
+  top: 28px;
+  left: 71px;
+  width: 239px;
+  height: 225px;
+  background-image: radial-gradient(#272727 3px, transparent 3px);
+  background-size: 15px 15px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.pagina--claro .pontos {
+  background-image: radial-gradient(#1e1e1e 3px, transparent 3px);
+}
+
+/* Botão de alternar tema */
+.tema-botao {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tema-botao:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Painel central preto */
+.painel {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1156px;
+  min-height: 537px;
+  background-color: #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 48px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cabeçalho "Perfil GitHub" */
+.cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cabecalho__icone {
+  width: 58px;
+  height: 58px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.cabecalho__titulo {
+  font-size: 60px;
+  line-height: 82px;
+  color: #ffffff;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cabecalho__github {
+  font-weight: 800;
+}
+
+/* Busca: o botão fica sobreposto à ponta direita do input, como no Figma */
+.busca {
+  position: relative;
+  width: 100%;
+  max-width: 503px;
+  height: 62px;
+  margin-top: 18px;
+}
+
+.busca__input {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  padding: 0 78px 0 20px; /* espaço à direita para o botão */
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+  color: #000000;
+  outline: none;
+}
+
+.busca__input::placeholder {
+  color: #000000;
+  font-weight: 600;
+}
+
+.busca__botao {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 62px;
+  height: 62px;
+  background-color: #005cff;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.busca__botao:hover {
+  background-color: #0048cc;
+}
+
+/* Cartão de perfil (804x257 no Figma) */
+.cartao {
+  width: 100%;
+  max-width: 804px;
+  min-height: 257px;
+  margin-top: 33px;
+  background-color: #d9d9d9;
+  border: 1px solid #000000;
+  border-radius: 25px;
+  padding: 18px 47px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: surgir 0.35s ease;
+}
+
+.cartao__foto {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 2px solid #005cff;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.cartao__info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cartao__nome {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  color: #005cff;
+}
+
+.cartao__bio {
+  max-width: 448px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
+  color: #000000;
+}
+
+.cartao__bio--vazia {
+  font-style: italic;
+  color: #555555;
+}
+
+/* Mensagem de erro (710x88, raio menor que o do cartão) */
+.mensagem-erro {
+  width: 100%;
+  max-width: 710px;
+  min-height: 88px;
+  margin-top: 33px;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  padding: 17px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: pre-line;
+  color: #ff0000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  animation: surgir 0.35s ease;
+}
+
+/* Indicador de carregamento (melhoria opcional do desafio) */
+.carregando {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 40px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.carregando__spinner {
+  width: 22px;
+  height: 22px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #005cff;
+  border-radius: 50%;
+  animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------------------------------------------------
+   Responsividade
+   ------------------------------------------------------------ */
+@media (max-width: 768px) {
+  .painel {
+    padding: 40px 18px;
+    min-height: auto;
+  }
+
+  .cabecalho__titulo {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .cabecalho__icone {
+    width: 40px;
+    height: 40px;
+  }
+
+  .busca {
+    margin-top: 24px;
+  }
+
+  .cartao {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+    gap: 16px;
+  }
+
+  .cartao__foto {
+    width: 150px;
+    height: 150px;
+  }
+
+  .pontos {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .cabecalho__titulo {
+    font-size: 30px;
+  }
+
+  .busca,
+  .busca__botao {
+    height: 54px;
+  }
+
+  .busca__botao {
+    width: 54px;
+  }
+
+  .busca__input {
+    font-size: 16px;
+    padding-right: 66px;
+  }
+
+  .mensagem-erro {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fundo e fonte da página. */
+html,
+body {
+  min-height: 100vh;
+  background-color: #1f1f1f;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+
+img {
+  display: block;
+  max-width: 100%;
+}

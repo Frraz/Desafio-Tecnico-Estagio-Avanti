@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avanti - E-commerce</title>
+    <link rel="icon" href="assets/logo-avanti.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Nunito:wght@400;600;700&family=Heebo:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+    <header class="topo">
+
+        <!-- Barra de cupom -->
+        <div class="topbar">
+            <p>Ganhe <strong class="topbar__valor">R$10,00</strong> de desconto no seu primeiro pedido. Utilize o cupom <strong>DESCONTO10</strong></p>
+        </div>
+
+        <!-- Logo + busca + ações -->
+        <div class="header-main container">
+            <a href="#" class="logo" aria-label="Página inicial Avanti">
+                <img src="assets/logo-avanti.svg" alt="Avanti" class="logo__img" />
+            </a>
+
+            <form class="busca" id="form-busca" role="search">
+                <input type="text"
+                    id="campo-busca"
+                    class="busca__input"
+                    placeholder="Digite aqui o que você procura"
+                    aria-label="Campo de busca" />
+                <button type="submit" class="busca__botao" aria-label="Buscar">
+                    <img src="assets/lupa.svg" alt="" />
+                </button>
+            </form>
+
+            <div class="header-acoes">
+                <a href="#" class="usuario">
+                    <img class="usuario__icone" src="assets/icone-usuario.svg" alt="" />
+                    <span class="usuario__texto">Olá,<br />Nome cliente!</span>
+                </a>
+
+                <a href="#" class="carrinho" aria-label="Carrinho de compras com 2 itens">
+                    <img class="carrinho__icone" src="assets/icone-carrinho.svg" alt="" />
+                    <span class="carrinho__badge">2</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Navegação de departamentos -->
+        <nav class="categorias" aria-label="Departamentos">
+            <div class="categorias__inner container">
+                <div class="categorias__todas-wrap tem-megamenu">
+                    <button class="categorias__todas" type="button" aria-haspopup="true" aria-expanded="false">
+                        <svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                            stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <line x1="0" y1="1" x2="14" y2="1"></line>
+                            <line x1="0" y1="5" x2="14" y2="5"></line>
+                            <line x1="0" y1="9" x2="14" y2="9"></line>
+                        </svg>
+                        <strong>Todas as Categorias</strong>
+                    </button>
+
+                    <!-- Painel "Todas as Categorias" -->
+                    <div class="megamenu megamenu--categorias" aria-label="Todos os departamentos">
+                        <div class="megamenu__conteudo megamenu__conteudo--categorias">
+                            <ul class="megamenu__departamentos">
+                                <li><a href="#" class="megamenu__departamento megamenu__departamento--destaque">Departamento</a></li>
+                                <li><a href="#" class="megamenu__departamento">Departamento</a></li>
+                                <li><a href="#" class="megamenu__departamento">Departamento</a></li>
+                                <li><a href="#" class="megamenu__departamento">Departamento</a></li>
+                                <li><a href="#" class="megamenu__departamento">Departamento</a></li>
+                                <li><a href="#" class="megamenu__departamento">Departamento</a></li>
+                                <li><a href="#" class="megamenu__departamento">Departamento</a></li>
+                                <li><a href="#" class="megamenu__departamento">Departamento</a></li>
+                                <li><a href="#" class="megamenu__departamento">Departamento</a></li>
+                                <li><a href="#" class="megamenu__departamento">Departamento</a></li>
+                                <li><a href="#" class="megamenu__departamento">Departamento</a></li>
+                                <li><a href="#" class="megamenu__departamento">Departamento</a></li>
+                            </ul>
+
+                            <div class="megamenu__colunas">
+                                <ul class="megamenu__coluna">
+                                    <li><a href="#" class="megamenu__link megamenu__link--destaque">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                </ul>
+                                <ul class="megamenu__coluna">
+                                    <li><a href="#" class="megamenu__link megamenu__link--destaque">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                </ul>
+                                <ul class="megamenu__coluna">
+                                    <li><a href="#" class="megamenu__link megamenu__link--destaque">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                </ul>
+                            </div>
+
+                            <a href="#" class="megamenu__promo">
+                                <p class="megamenu__promo-texto">
+                                    Confira os Produtos<br />
+                                    <strong>Que acabaram<br />De chegar</strong>
+                                </p>
+                                <span class="megamenu__promo-botao">VER TODOS</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="categorias__lista">
+                    <li class="categorias__item tem-megamenu">
+                        <a href="#" class="categorias__link" aria-haspopup="true" aria-expanded="false">Departamento</a>
+
+                        <!-- Painel do departamento -->
+                        <div class="megamenu" aria-label="Categorias do departamento">
+                            <div class="megamenu__conteudo">
+                                <h3 class="megamenu__titulo">Departamento</h3>
+                                <div class="megamenu__colunas">
+                                    <ul class="megamenu__coluna">
+                                        <li><a href="#" class="megamenu__link megamenu__link--destaque">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    </ul>
+                                    <ul class="megamenu__coluna">
+                                        <li><a href="#" class="megamenu__link megamenu__link--destaque">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    </ul>
+                                    <ul class="megamenu__coluna">
+                                        <li><a href="#" class="megamenu__link megamenu__link--destaque">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                        <li><a href="#" class="megamenu__link">Categoria</a></li>
+                                    </ul>
+                                </div>
+
+                                <a href="#" class="megamenu__promo">
+                                    <p class="megamenu__promo-texto">
+                                        Confira os Produtos<br />
+                                        <strong>Que acabaram<br />De chegar</strong>
+                                    </p>
+                                    <span class="megamenu__promo-botao">VER TODOS</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="categorias__item"><a href="#" class="categorias__link">Departamento</a></li>
+                    <li class="categorias__item"><a href="#" class="categorias__link">Departamento</a></li>
+                    <li class="categorias__item"><a href="#" class="categorias__link">Departamento</a></li>
+                    <li class="categorias__item"><a href="#" class="categorias__link">Departamento</a></li>
+                    <li class="categorias__item"><a href="#" class="categorias__link">Departamento</a></li>
+                    <li class="categorias__item"><a href="#" class="categorias__link">Departamento</a></li>
+                    <li class="categorias__item"><a href="#" class="categorias__link">Departamento</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Mensagem "Você buscou por..." (preenchida pelo JS) -->
+        <p id="resultado-busca" class="resultado-busca container" aria-live="polite"></p>
+    </header>
+
+    <main>
+
+        <!-- Banner SUPERSALE -->
+        <section class="hero">
+            <img src="assets/banner-supersale.png"
+                alt="SUPERSALE — itens selecionados com até 50% OFF"
+                class="hero__img" />
+        </section>
+
+        <!-- Carrossel: Lançamentos -->
+        <section class="secao-carrossel container">
+            <div class="secao-carrossel__topo">
+                <h2 class="secao-carrossel__titulo">Lançamentos</h2>
+                <a href="#" class="secao-carrossel__vermais">Ver mais</a>
+            </div>
+
+            <div class="carrossel">
+                <div class="swiper carrossel__swiper" data-swiper>
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <span class="card__badge card__badge--vazio" aria-hidden="true"></span>
+                                <div class="card__imagem">
+                                    <img src="assets/produto-camiseta.png" alt="Camiseta branca masculina" />
+                                </div>
+                                <div class="card__corpo">
+                                    <h3 class="card__titulo">&lt;h3&gt; Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit &lt;/h3&gt;</h3>
+                                    <p class="card__preco-antigo"><s>R$ 100,00</s></p>
+                                    <p class="card__preco-linha">
+                                        <strong class="card__preco">R$79,90</strong>
+                                        <span class="card__desconto">10% OFF</span>
+                                    </p>
+                                    <p class="card__parcelas">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="card__botao" type="button">Comprar</button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <span class="card__badge">NOVO</span>
+                                <div class="card__imagem">
+                                    <img src="assets/produto-camiseta.png" alt="Camiseta branca masculina" />
+                                </div>
+                                <div class="card__corpo">
+                                    <h3 class="card__titulo">&lt;h3&gt; Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit &lt;/h3&gt;</h3>
+                                    <p class="card__preco-antigo"><s>R$ 100,00</s></p>
+                                    <p class="card__preco-linha">
+                                        <strong class="card__preco">R$79,90</strong>
+                                        <span class="card__desconto">10% OFF</span>
+                                    </p>
+                                    <p class="card__parcelas">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="card__botao" type="button">Comprar</button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <span class="card__badge">NOVO</span>
+                                <div class="card__imagem">
+                                    <img src="assets/produto-camiseta.png" alt="Camiseta branca masculina" />
+                                </div>
+                                <div class="card__corpo">
+                                    <h3 class="card__titulo">&lt;h3&gt; Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit &lt;/h3&gt;</h3>
+                                    <p class="card__preco-antigo"><s>R$ 100,00</s></p>
+                                    <p class="card__preco-linha">
+                                        <strong class="card__preco">R$79,90</strong>
+                                        <span class="card__desconto">10% OFF</span>
+                                    </p>
+                                    <p class="card__parcelas">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="card__botao" type="button">Comprar</button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <span class="card__badge">NOVO</span>
+                                <div class="card__imagem">
+                                    <img src="assets/produto-camiseta.png" alt="Camiseta branca masculina" />
+                                </div>
+                                <div class="card__corpo">
+                                    <h3 class="card__titulo">&lt;h3&gt; Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit &lt;/h3&gt;</h3>
+                                    <p class="card__preco-antigo"><s>R$ 100,00</s></p>
+                                    <p class="card__preco-linha">
+                                        <strong class="card__preco">R$79,90</strong>
+                                        <span class="card__desconto">10% OFF</span>
+                                    </p>
+                                    <p class="card__parcelas">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="card__botao" type="button">Comprar</button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <span class="card__badge">NOVO</span>
+                                <div class="card__imagem">
+                                    <img src="assets/produto-camiseta.png" alt="Camiseta branca masculina" />
+                                </div>
+                                <div class="card__corpo">
+                                    <h3 class="card__titulo">&lt;h3&gt; Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit &lt;/h3&gt;</h3>
+                                    <p class="card__preco-antigo"><s>R$ 100,00</s></p>
+                                    <p class="card__preco-linha">
+                                        <strong class="card__preco">R$79,90</strong>
+                                        <span class="card__desconto">10% OFF</span>
+                                    </p>
+                                    <p class="card__parcelas">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="card__botao" type="button">Comprar</button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <span class="card__badge">NOVO</span>
+                                <div class="card__imagem">
+                                    <img src="assets/produto-camiseta.png" alt="Camiseta branca masculina" />
+                                </div>
+                                <div class="card__corpo">
+                                    <h3 class="card__titulo">&lt;h3&gt; Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit &lt;/h3&gt;</h3>
+                                    <p class="card__preco-antigo"><s>R$ 100,00</s></p>
+                                    <p class="card__preco-linha">
+                                        <strong class="card__preco">R$79,90</strong>
+                                        <span class="card__desconto">10% OFF</span>
+                                    </p>
+                                    <p class="card__parcelas">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="card__botao" type="button">Comprar</button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <span class="card__badge">NOVO</span>
+                                <div class="card__imagem">
+                                    <img src="assets/produto-camiseta.png" alt="Camiseta branca masculina" />
+                                </div>
+                                <div class="card__corpo">
+                                    <h3 class="card__titulo">&lt;h3&gt; Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit &lt;/h3&gt;</h3>
+                                    <p class="card__preco-antigo"><s>R$ 100,00</s></p>
+                                    <p class="card__preco-linha">
+                                        <strong class="card__preco">R$79,90</strong>
+                                        <span class="card__desconto">10% OFF</span>
+                                    </p>
+                                    <p class="card__parcelas">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="card__botao" type="button">Comprar</button>
+                                </div>
+                            </article>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="carrossel__seta carrossel__seta--prev" type="button" aria-label="Slide anterior">
+                    <img src="assets/seta-carrossel.svg" alt="" />
+                </button>
+                <button class="carrossel__seta carrossel__seta--next" type="button" aria-label="Próximo slide">
+                    <img src="assets/seta-carrossel.svg" alt="" />
+                </button>
+                <div class="carrossel__paginacao"></div>
+            </div>
+        </section>
+
+        <!-- Seção caneca + texto -->
+        <section class="secao-conteudo container">
+            <div class="secao-conteudo__imagem">
+                <img src="assets/caneca.png" alt="Caneca preta com a marca Avanti" />
+            </div>
+
+            <div class="secao-conteudo__texto">
+                <h2>LOREM IPSUM</h2>
+                <p>
+                    Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus
+                    dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat
+                    dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel
+                    pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget
+                    lacinia. Donec sollicitudin euismod orci, auctor fringilla magna
+                    consequat interdum. Fusce sagittis elit a libero commodo egestas
+                    efficitur id augue.
+                </p>
+                <p>
+                    Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus
+                    dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat
+                    dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel
+                    pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget
+                    lacinia. Donec sollicitudin euismod orci, auctor fringilla magna
+                    consequat interdum. Fusce sagittis elit a libero commodo egestas
+                    efficitur id augue.
+                </p>
+            </div>
+        </section>
+
+        <!-- Seção de diferenciais -->
+        <section class="secao-features">
+            <div class="secao-features__inner container">
+                <div class="secao-features__texto">
+                    <h2>LOREM IPSUM</h2>
+
+                    <div class="feature">
+                        <img class="feature__icone" src="assets/icone-pin.svg" alt="" />
+                        <p>
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+                            montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                            pellentesque eu, pretium quis, sem.
+                        </p>
+                    </div>
+
+                    <div class="feature">
+                        <img class="feature__icone" src="assets/icone-pin.svg" alt="" />
+                        <p>
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+                            montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                            pellentesque eu, pretium quis, sem.
+                        </p>
+                    </div>
+
+                    <div class="feature">
+                        <img class="feature__icone" src="assets/icone-pin.svg" alt="" />
+                        <p>
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+                            montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                            pellentesque eu, pretium quis, sem.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="secao-features__imagem">
+                    <img src="assets/banner-cozinha.png" alt="Caneca Avanti sobre tábua de madeira na cozinha" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção caneca + texto (2) -->
+        <section class="secao-conteudo container">
+            <div class="secao-conteudo__imagem">
+                <img src="assets/caneca.png" alt="Caneca preta com a marca Avanti" />
+            </div>
+
+            <div class="secao-conteudo__texto">
+                <h2>LOREM IPSUM</h2>
+                <p>
+                    Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus
+                    dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat
+                    dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel
+                    pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget
+                    lacinia. Donec sollicitudin euismod orci, auctor fringilla magna
+                    consequat interdum. Fusce sagittis elit a libero commodo egestas
+                    efficitur id augue.
+                </p>
+                <p>
+                    Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus
+                    dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat
+                    dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel
+                    pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget
+                    lacinia. Donec sollicitudin euismod orci, auctor fringilla magna
+                    consequat interdum. Fusce sagittis elit a libero commodo egestas
+                    efficitur id augue.
+                </p>
+            </div>
+        </section>
+
+        <!-- Carrossel: Lançamentos (2) -->
+        <section class="secao-carrossel container">
+            <div class="secao-carrossel__topo">
+                <h2 class="secao-carrossel__titulo">Lançamentos</h2>
+                <a href="#" class="secao-carrossel__vermais">Ver mais</a>
+            </div>
+
+            <div class="carrossel">
+                <div class="swiper carrossel__swiper" data-swiper>
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <span class="card__badge">NOVO</span>
+                                <div class="card__imagem">
+                                    <img src="assets/produto-camiseta.png" alt="Camiseta branca masculina" />
+                                </div>
+                                <div class="card__corpo">
+                                    <h3 class="card__titulo">&lt;h3&gt; Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit &lt;/h3&gt;</h3>
+                                    <p class="card__preco-antigo"><s>R$ 100,00</s></p>
+                                    <p class="card__preco-linha">
+                                        <strong class="card__preco">R$79,90</strong>
+                                        <span class="card__desconto">10% OFF</span>
+                                    </p>
+                                    <p class="card__parcelas">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="card__botao" type="button">Comprar</button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <span class="card__badge">NOVO</span>
+                                <div class="card__imagem">
+                                    <img src="assets/produto-camiseta.png" alt="Camiseta branca masculina" />
+                                </div>
+                                <div class="card__corpo">
+                                    <h3 class="card__titulo">&lt;h3&gt; Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit &lt;/h3&gt;</h3>
+                                    <p class="card__preco-antigo"><s>R$ 100,00</s></p>
+                                    <p class="card__preco-linha">
+                                        <strong class="card__preco">R$79,90</strong>
+                                        <span class="card__desconto">10% OFF</span>
+                                    </p>
+                                    <p class="card__parcelas">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="card__botao" type="button">Comprar</button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <span class="card__badge">NOVO</span>
+                                <div class="card__imagem">
+                                    <img src="assets/produto-camiseta.png" alt="Camiseta branca masculina" />
+                                </div>
+                                <div class="card__corpo">
+                                    <h3 class="card__titulo">&lt;h3&gt; Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit &lt;/h3&gt;</h3>
+                                    <p class="card__preco-antigo"><s>R$ 100,00</s></p>
+                                    <p class="card__preco-linha">
+                                        <strong class="card__preco">R$79,90</strong>
+                                        <span class="card__desconto">10% OFF</span>
+                                    </p>
+                                    <p class="card__parcelas">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="card__botao" type="button">Comprar</button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <span class="card__badge">NOVO</span>
+                                <div class="card__imagem">
+                                    <img src="assets/produto-camiseta.png" alt="Camiseta branca masculina" />
+                                </div>
+                                <div class="card__corpo">
+                                    <h3 class="card__titulo">&lt;h3&gt; Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit &lt;/h3&gt;</h3>
+                                    <p class="card__preco-antigo"><s>R$ 100,00</s></p>
+                                    <p class="card__preco-linha">
+                                        <strong class="card__preco">R$79,90</strong>
+                                        <span class="card__desconto">10% OFF</span>
+                                    </p>
+                                    <p class="card__parcelas">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="card__botao" type="button">Comprar</button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <span class="card__badge">NOVO</span>
+                                <div class="card__imagem">
+                                    <img src="assets/produto-camiseta.png" alt="Camiseta branca masculina" />
+                                </div>
+                                <div class="card__corpo">
+                                    <h3 class="card__titulo">&lt;h3&gt; Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit &lt;/h3&gt;</h3>
+                                    <p class="card__preco-antigo"><s>R$ 100,00</s></p>
+                                    <p class="card__preco-linha">
+                                        <strong class="card__preco">R$79,90</strong>
+                                        <span class="card__desconto">10% OFF</span>
+                                    </p>
+                                    <p class="card__parcelas">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="card__botao" type="button">Comprar</button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <span class="card__badge">NOVO</span>
+                                <div class="card__imagem">
+                                    <img src="assets/produto-camiseta.png" alt="Camiseta branca masculina" />
+                                </div>
+                                <div class="card__corpo">
+                                    <h3 class="card__titulo">&lt;h3&gt; Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit &lt;/h3&gt;</h3>
+                                    <p class="card__preco-antigo"><s>R$ 100,00</s></p>
+                                    <p class="card__preco-linha">
+                                        <strong class="card__preco">R$79,90</strong>
+                                        <span class="card__desconto">10% OFF</span>
+                                    </p>
+                                    <p class="card__parcelas">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="card__botao" type="button">Comprar</button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <span class="card__badge">NOVO</span>
+                                <div class="card__imagem">
+                                    <img src="assets/produto-camiseta.png" alt="Camiseta branca masculina" />
+                                </div>
+                                <div class="card__corpo">
+                                    <h3 class="card__titulo">&lt;h3&gt; Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit &lt;/h3&gt;</h3>
+                                    <p class="card__preco-antigo"><s>R$ 100,00</s></p>
+                                    <p class="card__preco-linha">
+                                        <strong class="card__preco">R$79,90</strong>
+                                        <span class="card__desconto">10% OFF</span>
+                                    </p>
+                                    <p class="card__parcelas">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="card__botao" type="button">Comprar</button>
+                                </div>
+                            </article>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="carrossel__seta carrossel__seta--prev" type="button" aria-label="Slide anterior">
+                    <img src="assets/seta-carrossel.svg" alt="" />
+                </button>
+                <button class="carrossel__seta carrossel__seta--next" type="button" aria-label="Próximo slide">
+                    <img src="assets/seta-carrossel.svg" alt="" />
+                </button>
+                <div class="carrossel__paginacao"></div>
+            </div>
+        </section>
+
+        <!-- Banner de contato -->
+        <section class="banner-contato">
+            <img src="assets/banner-contato.png"
+                alt="Recepção com a marca Avanti iluminada"
+                class="banner-contato__img" />
+            <div class="banner-contato__faixa">
+                <p>Entre em contato conosco e verifique a disponibilidade para sua região!</p>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <h2 class="newsletter__titulo">
+                Cadastre-se na nossa <span class="newsletter__destaque">newsletter</span>
+            </h2>
+
+            <div class="newsletter__faixa">
+                <form class="newsletter__form" id="form-newsletter">
+                    <input type="text" class="newsletter__input" placeholder="Digite seu nome" aria-label="Digite seu nome" />
+                    <input type="email" class="newsletter__input" placeholder="Digite seu e-mail" aria-label="Digite seu e-mail" />
+
+                    <label class="newsletter__aceite">
+                        <input type="checkbox" />
+                        <span>Estou de acordo com a <a href="#">Política de Privacidade</a></span>
+                    </label>
+
+                    <button type="submit" class="newsletter__botao">Cadastrar</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape__conteudo container">
+
+            <div class="rodape__marca">
+                <img class="rodape__logo" src="assets/logo-avanti.svg" alt="Avanti" />
+                <p class="rodape__sociais-titulo">Siga nossas redes sociais</p>
+                <div class="rodape__sociais">
+                    <a href="#" aria-label="Instagram"><img src="assets/instagram.svg" alt="Instagram" /></a>
+                    <a href="#" aria-label="Facebook"><img src="assets/facebook.svg" alt="Facebook" /></a>
+                    <a href="#" aria-label="YouTube"><img src="assets/youtube.svg" alt="YouTube" /></a>
+                    <a href="#" aria-label="TikTok"><img src="assets/tiktok.svg" alt="TikTok" /></a>
+                </div>
+            </div>
+
+            <div class="rodape__coluna">
+                <h4 class="rodape__titulo"><span class="tag">&lt;h4&gt;</span> Institucional</h4>
+                <ul>
+                    <li><a href="#"><span class="tag">&lt;h5&gt;</span> Sobre Nós</a></li>
+                    <li><a href="#"><span class="tag">&lt;h5&gt;</span> Nossas Lojas</a></li>
+                    <li><a href="#"><span class="tag">&lt;h5&gt;</span> Privacidade e Segurança</a></li>
+                    <li><a href="#"><span class="tag">&lt;h5&gt;</span> Termos e Condições</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape__coluna">
+                <h4 class="rodape__titulo"><span class="tag">&lt;h4&gt;</span> Central de ajuda</h4>
+                <ul>
+                    <li><a href="#"><span class="tag">&lt;h5&gt;</span> Fale Conosco</a></li>
+                    <li><a href="#"><span class="tag">&lt;h5&gt;</span> Frete e Entrega</a></li>
+                    <li><a href="#"><span class="tag">&lt;h5&gt;</span> Trocas e Devoluções</a></li>
+                    <li><a href="#"><span class="tag">&lt;h5&gt;</span> Formas de Pagamento</a></li>
+                    <li><a href="#"><span class="tag">&lt;h5&gt;</span> FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape__coluna">
+                <h4 class="rodape__titulo"><span class="tag">&lt;h4&gt;</span> Atendimento</h4>
+                <p><span class="tag">&lt;h5&gt;</span> <strong>Telefone:</strong> (00) 1234-5678</p>
+                <p><span class="tag">&lt;h5&gt;</span> <strong>E-mail:</strong> exemplo@exemplo.com.br</p>
+                <p><span class="tag">&lt;h5&gt;</span> <strong>Horário de atendimento:</strong></p>
+                <p class="rodape__horario">Segunda a Sábado: 07h00 às 23h00</p>
+                <p class="rodape__horario">Domingos e Feriados: 07h00 às 21h00</p>
+            </div>
+        </div>
+
+        <div class="rodape__base container">
+            <img class="rodape__pagamentos" src="assets/pagamentos.png"
+                alt="Formas de pagamento: American Express, Mastercard, Visa, Hipercard, Elo, Diners Club, PayPal e Boleto" />
+
+            <p class="rodape__lorem">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip.
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            </p>
+
+            <img class="rodape__selos" src="assets/selos-rodape.png"
+                alt="Selos: Let's Encrypt, VTEX PCI Certified, Avanti e VTEX" />
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="JS/script.js"></script>
+
+</body>
+
+</html>
